@@ -1,3 +1,11 @@
+
+# 配置
+./blog-express/conf/*
+
+# idea
+.idea
+./blog-express/.idea
+
 # Logs
 logs
 *.log
