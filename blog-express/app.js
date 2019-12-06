@@ -7,14 +7,17 @@ var logger = require('morgan'); // 记录日志
 const session = require('express-session');
 const RedisStore = require('connect-redis')(session);
 
+
 // 引用路由
 // var indexRouter = require('./routes/index');
 // var usersRouter = require('./routes/users');
 const blogRouter = require('./routes/blog');
 const userRouter = require('./routes/user');
 
+
 // 本次http请求实例
 var app = express();
+
 
 // // view engine setup // 注册视图引擎
 // app.set('views', path.join(__dirname, 'views'));
@@ -71,6 +74,7 @@ app.use('/api/user', userRouter);
 app.use(function (req, res, next) {
     next(createError(404));
 });
+
 
 // error handler
 app.use(function (err, req, res, next) {
